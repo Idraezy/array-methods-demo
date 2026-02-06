@@ -1,0 +1,31 @@
+$primary-color: #4f46e5;
+$secondary-color: #f59e0b;
+$font-main: Arial, sans-serif;
+
+@mixin button-style($bg) {
+  background-color: $bg;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: $font-main;
+  background: #f4f4f4;
+
+  header {
+    background: $primary-color;
+    color: white;
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+
+    button {
+      @include button-style($secondary-color);
+    }
+  }
+}
